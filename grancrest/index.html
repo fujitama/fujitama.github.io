@@ -44,7 +44,11 @@ table td {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
-$(function reload(){
+$(function(){
+    reload();
+});
+
+function reload(){
     var array = new Array();
     var sum9 = 0;
     var resource = 0;
@@ -63,8 +67,7 @@ $(function reload(){
         }
     }
     $('#sum_sum').text(resource);
-
-});
+}
 
 function increment(id){
     $('#' + id).text($('#' + id) + 1);
