@@ -45,25 +45,40 @@ table td {
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
 $(function(){
-    var sum1 = $('#1-1').text() * $('#1-9').text() + $('#2-1').text() * $('#2-9').text() + $('#3-1').text() * $('#3-9').text();
-    var sum2 = $('[id="1-2"]').text() * $('[id="1-9"]').text() + $('[id="2-2"]').text() * $('[id="2-9"]').text() + $('[id="3-2"]').text() * $('[id="3-9"]').text();
-    var sum3 = $('[id="1-3"]').text() * $('[id="1-9"]').text() + $('[id="2-3"]').text() * $('[id="2-9"]').text() + $('[id="3-3"]').text() * $('[id="3-9"]').text();
-    var sum4 = $('[id="1-4"]').text() * $('[id="1-9"]').text() + $('[id="2-4"]').text() * $('[id="2-9"]').text() + $('[id="3-4"]').text() * $('[id="3-9"]').text();
-    var sum5 = $('[id="1-5"]').text() * $('[id="1-9"]').text() + $('[id="2-5"]').text() * $('[id="2-9"]').text() + $('[id="3-5"]').text() * $('[id="3-9"]').text();
-    var sum6 = $('[id="1-6"]').text() * $('[id="1-9"]').text() + $('[id="2-6"]').text() * $('[id="2-9"]').text() + $('[id="3-6"]').text() * $('[id="3-9"]').text();
-    var sum7 = $('[id="1-7"]').text() * $('[id="1-9"]').text() + $('[id="2-7"]').text() * $('[id="2-9"]').text() + $('[id="3-7"]').text() * $('[id="3-9"]').text();
-    var sum8 = $('[id="1-8"]').text() * $('[id="1-9"]').text() + $('[id="2-8"]').text() * $('[id="2-9"]').text() + $('[id="3-8"]').text() * $('[id="3-9"]').text();
-    var sum9 = $('[id="1-9"]').text() * 1 + $('[id="2-9"]').text() * 1 + $('[id="3-9"]').text() * 1;
-    $('[id="sum1"]').text(sum1);
-    $('[id="sum2"]').text(sum2);
-    $('[id="sum3"]').text(sum3);
-    $('[id="sum4"]').text(sum4);
-    $('[id="sum5"]').text(sum5);
-    $('[id="sum6"]').text(sum6);
-    $('[id="sum7"]').text(sum7);
-    $('[id="sum8"]').text(sum8);
-    $('[id="sum9"]').text(sum9);
-    $('[id="sum_sum"]').text(sum1+sum2+sum3+sum4+sum5+sum6+sum7);
+    var array = new Array();
+    var sum9 = 0;
+    var resource = 0;
+    for(var i = 1; i <= 3; i++){
+        var sum = 0;
+        for(var j = 1; j <= 8; j++){
+            var id = i + '-' + j;
+            sum = $('#' + id).text() * $('#'+ num).text();
+	}
+        var array['sum'+ i] = sum;
+	var num = i + '-9';
+        var sum9 += $('#' + num).text() * 1;
+	if(i != 8){
+	    resource += sum;
+	}
+    }
+    $('[id="sum1"]').text(array(sum1));
+    $('[id="sum2"]').text(array(sum2));
+    $('[id="sum3"]').text(array(sum3));
+    $('[id="sum4"]').text(array(sum4));
+    $('[id="sum5"]').text(array(sum5));
+    $('[id="sum6"]').text(array(sum6));
+    $('[id="sum7"]').text(array(sum7));
+    $('[id="sum8"]').text(array(sum8));
+    $('[id="sum9"]').text(array(sum9));
+    $('[id="sum_sum"]').text(resource);
+//            var sum1 = $('#' + id).text() * $('#1-9').text() + $('#2-1').text() * $('#2-9').text() + $('#3-1').text() * $('#3-9').text();
+//            var sum2 = $('#1-2').text() * $('#1-9').text() + $('#2-2').text() * $('#2-9').text() + $('#3-2').text() * $('#3-9').text();
+//            var sum3 = $('#1-3').text() * $('#1-9').text() + $('#2-3').text() * $('#2-9').text() + $('#3-3').text() * $('#3-9').text();
+//            var sum4 = $('#1-4').text() * $('#1-9').text() + $('#2-4').text() * $('#2-9').text() + $('#3-4').text() * $('#3-9').text();
+//            var sum5 = $('#1-5').text() * $('#1-9').text() + $('#2-5').text() * $('#2-9').text() + $('#3-5').text() * $('#3-9').text();
+//            var sum6 = $('#1-6').text() * $('#1-9').text() + $('#2-6').text() * $('#2-9').text() + $('#3-6').text() * $('#3-9').text();
+//            var sum7 = $('#1-7').text() * $('#1-9').text() + $('#2-7').text() * $('#2-9').text() + $('#3-7').text() * $('#3-9').text();
+//            var sum8 = $('#1-8').text() * $('#1-9').text() + $('#2-8').text() * $('#2-9').text() + $('#3-8').text() * $('#3-9').text();
 
 });
 </script>
