@@ -51,8 +51,8 @@ $(function(){
     for(var i = 1; i <= 9; i++){
         var sum = 0;
         for(var j = 1; j <= 3; j++){
-            var id = i + '-' + j;
-            sum += $('#' + id).text() * $('#'+ i + '-9').text();
+            var id = j + '-' + i;
+            sum += $('#' + id).text() * $('#'+ j + '-9').text();
 	}
         array['sum'+ i] = sum;
         $('#sum' + i).text(sum);
