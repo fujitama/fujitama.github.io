@@ -67,14 +67,14 @@ $(function reload(){
 });
 
 function increment(id){
-    $('#' + id) = $('#' + id) + 1;
+    $('#' + id).text($('#' + id) + 1);
     reload();
 }
 
 function decrement(id){
     var num = $('#' + id);
     if( num != 0 ){
-        $('#' + id) = num - 1;
+        $('#' + id).text(num - 1);
     }
     reload();
 }
