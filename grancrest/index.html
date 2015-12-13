@@ -48,17 +48,17 @@ $(function(){
     var array = new Array();
     var sum9 = 0;
     var resource = 0;
-    for(var i = 1; i <= 8; i++){
+    for(var i = 1; i <= 9; i++){
         var sum = 0;
         for(var j = 1; j <= 3; j++){
             var id = i + '-' + j;
-            sum = $('#' + id).text() * $('#'+ num).text();
+            sum = $('#' + id).text() * $('#'+ i + '-9').text();
 	}
         array['sum'+ i] = sum;
         $('#sum' + i).text(sum);
         var num = i + '-9';
         var sum9 = $('#' + num).text() * 1;
-       if(i != 8){
+       if(i != 8 && i != 9){
             resource += sum;
         }
     }
