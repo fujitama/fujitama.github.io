@@ -1,7 +1,9 @@
 ﻿<html>
 <head>
 <title>test</title>
-</head>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
 <style type="text/css">
 table {
   border-collapse: collapse;
@@ -13,7 +15,8 @@ table th {
 table td {
   text-align: center;
 }
-	</style>
+</style>
+</head>
 <body>
 <table>
   <thead>
@@ -23,19 +26,22 @@ table td {
   </thead>
   <tbody>
     <tr>
-        <th>Lv1</th><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td>
+        <th>Lv1</th><td id='1-1'>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td>
     </tr>
     <tr>
-        <th>Lv2</th><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td>
+        <th>Lv2</th><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td>
     </tr>
     <tr>
-        <th>Lv3</th><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td>
+        <th>Lv3</th><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td>
     </tr>
     <tr>
         <th>Sum</th><td id='sum1'></td><td id='sum2'></td><td id='sum3'></td><td id='sum4'></td><td id='sum5'></td><td id='sum6'></td><td id='sum7'></td><td id='sum8'></td><td id='sum9'></td><td id='sum_sum'></td>
     </tr>
   </tbody>
 </table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
 $(function(){
     var sum1 = $('[id="1-1"]').text();
