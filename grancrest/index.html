@@ -55,21 +55,22 @@ $(function(){
             sum = $('#' + id).text() * $('#'+ num).text();
 	}
         array['sum'+ i] = sum;
+        $('#sum' + i).text(array(sum));
         var num = i + '-9';
         var sum9 = $('#' + num).text() * 1;
-	if(i != 8){
-	    resource += sum;
-	}
+       if(i != 8){
+            resource += sum;
+        }
     }
-    $('[id="sum1"]').text(array(sum1));
-    $('[id="sum2"]').text(array(sum2));
-    $('[id="sum3"]').text(array(sum3));
-    $('[id="sum4"]').text(array(sum4));
-    $('[id="sum5"]').text(array(sum5));
-    $('[id="sum6"]').text(array(sum6));
-    $('[id="sum7"]').text(array(sum7));
-    $('[id="sum8"]').text(array(sum8));
-    $('[id="sum9"]').text(array(sum9));
+//    $('[id="sum1"]').text(array(sum1));
+//    $('[id="sum2"]').text(array(sum2));
+//    $('[id="sum3"]').text(array(sum3));
+//    $('[id="sum4"]').text(array(sum4));
+//    $('[id="sum5"]').text(array(sum5));
+//    $('[id="sum6"]').text(array(sum6));
+//    $('[id="sum7"]').text(array(sum7));
+//    $('[id="sum8"]').text(array(sum8));
+//    $('[id="sum9"]').text(array(sum9));
     $('[id="sum_sum"]').text(resource);
 //            var sum1 = $('#' + id).text() * $('#1-9').text() + $('#2-1').text() * $('#2-9').text() + $('#3-1').text() * $('#3-9').text();
 //            var sum2 = $('#1-2').text() * $('#1-9').text() + $('#2-2').text() * $('#2-9').text() + $('#3-2').text() * $('#3-9').text();
